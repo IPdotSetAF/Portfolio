@@ -1,0 +1,76 @@
+@font-face {
+    font-family: "myFont";
+    src: url("fonts/YoungSerif-Regular.woff") format('woff');
+}
+
+* {
+    font-family: myFont;
+}
+
+body{
+    background-color: black;
+}
+
+h1, h2, div{
+    color: cornsilk;
+}
+
+.title{
+    text-align: right;
+    text-transform: uppercase;
+}
+
+#titleDiv{
+    width: 100%;
+}
+
+#div1 {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#skillContainer {
+    display: inline-block;
+    clear: both;
+    content: "";
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 800px;
+}
+
+#skillContainer:hover>.skill{
+    width: 22%;
+    background-color: #525252;
+}
+
+.skill{
+    float: left;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    transition: 300ms ease-in-out;
+    background-blend-mode: multiply;
+    background-color: #c6c6c6;
+    background-position: center;
+}
+
+.skill:hover {
+    width: 34% !important;
+    background-color: #ffffff !important;
+    cursor: pointer;
+}
+
+.skill>h2{
+    color: white;
+    width: auto;
+    height: auto;
+    margin: 25px 0;
+    transition: 300ms ease-in-out;
+    text-transform: capitalize;
+}
+
+.skill:hover>h2{
+    margin: 380px 0;
+}
