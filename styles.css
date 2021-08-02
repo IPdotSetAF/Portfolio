@@ -53,7 +53,7 @@ h1, h2, div{
     transition: 300ms ease-in-out;
     background-blend-mode: multiply;
     background-color: #c6c6c6;
-    background-position: center;
+    background-size: cover;
 }
 
 .skill:hover {
@@ -67,10 +67,11 @@ h1, h2, div{
     width: auto;
     height: auto;
     margin: 25px 0;
-    transition: 300ms ease-in-out;
+    transition: 200ms ease-in-out;
     text-transform: capitalize;
 }
 
 .skill:hover>h2{
-    margin: 380px 0;
+    /*margin: 380px 0;*/
+    margin: 75px 0;
 }
