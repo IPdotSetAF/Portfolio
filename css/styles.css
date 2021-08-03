@@ -39,6 +39,8 @@ body{
     display: inline-flex;
     height: 50px;
     justify-content: center;
+    opacity: 0;
+    animation: 2s ease-out fadeIn 2s 1 forwards;
 }
 
 .topbarItem{
@@ -47,10 +49,8 @@ body{
     padding: 0 10px;
     text-decoration: none;
     color: #d6d6d6;
-    opacity: 0;
     transition: 300ms ease-in-out;
     text-transform: capitalize;
-    animation: 2s ease-out fadeIn 2s 1 forwards;
 }
 
 .topbarItem:hover{
