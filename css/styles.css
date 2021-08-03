@@ -6,12 +6,12 @@
 @keyframes fadeInFromTop {
     0%{
         transform: translateY(-100%);
-        color: rgba(255, 255, 255, 0);
+        opacity: 0;
     }
 
     100%{
         transform: translateY(0);
-        color: white;
+        opacity: 100;
     }
 }
 
@@ -40,7 +40,7 @@ body{
     height: 50px;
     justify-content: center;
     opacity: 0;
-    animation: 2s ease-out fadeIn 2s 1 forwards;
+    animation: 2s ease-out fadeIn 4s 1 forwards;
 }
 
 .topbarItem{
@@ -64,8 +64,42 @@ body{
     display: block;
 }
 
+#ipaf{
+    margin: 10px;
+    position: sticky;
+    width: fit-content;
+    top: 20px;
+    z-index: 10;
+}
+
+.ipaf{
+    text-transform: uppercase;
+    position: relative;
+    width: 20px;
+    opacity: 0;
+    text-align: center;
+}
+
+#ipaf0{
+    animation: 500ms ease-in-out fadeInFromTop 0s 1 forwards;
+}
+#ipaf1{
+    animation: 500ms ease-in-out fadeInFromTop 500ms 1 forwards;
+}
+#ipaf2{
+    animation: 500ms ease-in-out fadeInFromTop 1s 1 forwards;
+}
+#ipaf3{
+    animation: 500ms ease-in-out fadeInFromTop 1500ms 1 forwards;
+}
+#ipaf4{
+    animation: 500ms ease-in-out fadeInFromTop 2s 1 forwards;
+}
+
+
 .title{
-    color: rgba(0, 0, 0, 0);
+    color: white;
+    opacity: 0;
     text-transform: uppercase;
     position: absolute;
 }
@@ -92,7 +126,8 @@ body{
     text-align: center;
     text-transform: capitalize;
     float: bottom;
-    color: rgba(0, 0, 0, 0);
+    color: white;
+    opacity: 0;
     animation: 2s ease-out fadeInFromTop 4s 1 forwards;
 }
 
