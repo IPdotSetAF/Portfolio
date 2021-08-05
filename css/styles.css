@@ -3,9 +3,21 @@
     src: url("../fonts/YoungSerif-Regular.woff") format('woff');
 }
 
-@keyframes fadeInFromTop {
+@keyframes fadeInFlipFromTop {
     0%{
         transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 100;
+    }
+}
+
+@keyframes fadeInFromTop {
+    0%{
+        transform: translateY(-50%);
         opacity: 0;
     }
 
@@ -34,13 +46,34 @@ body{
     background-color: #111111;
 }
 
+.scrollSnapContainer{
+    border: blue 1px solid;
+    position: absolute;
+    width: 98%;
+    height: 1680px;
+    margin: 0;
+    z-index: -1;
+}
+
+.scrollSnapLocation{
+    scroll-snap-align: center;
+    position: relative;
+    flex-direction: column;
+    border: red 1px solid;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    display: flex;
+}
+
 #topbar{
     width: 100%;
     display: inline-flex;
     height: 50px;
     justify-content: center;
     opacity: 0;
-    animation: 2s ease-out fadeIn 4s 1 forwards;
+    animation: 1s ease-out fadeIn 1500ms 1 forwards;
 }
 
 .topbarItem{
@@ -81,19 +114,19 @@ body{
 }
 
 #ipaf0{
-    animation: 500ms ease-in-out fadeInFromTop 0s 1 forwards;
+    animation: 300ms ease-in-out fadeInFlipFromTop 0s 1 forwards;
 }
 #ipaf1{
-    animation: 500ms ease-in-out fadeInFromTop 500ms 1 forwards;
+    animation: 300ms ease-in-out fadeInFlipFromTop 300ms 1 forwards;
 }
 #ipaf2{
-    animation: 500ms ease-in-out fadeInFromTop 1s 1 forwards;
+    animation: 300ms ease-in-out fadeInFlipFromTop 600ms 1 forwards;
 }
 #ipaf3{
-    animation: 500ms ease-in-out fadeInFromTop 1500ms 1 forwards;
+    animation: 300ms ease-in-out fadeInFlipFromTop 900ms 1 forwards;
 }
 #ipaf4{
-    animation: 500ms ease-in-out fadeInFromTop 2s 1 forwards;
+    animation: 300ms ease-in-out fadeInFlipFromTop 1200ms 1 forwards;
 }
 
 
@@ -105,19 +138,19 @@ body{
 }
 
 #title1{
-    animation: 2s ease-out fadeInFromTop 0s 1 forwards;
+    animation: 1s ease-out fadeInFromTop 0s 1 forwards;
     top: 200px;
     right: 310px;
 }
 
 #title2{
-    animation: 2s ease-out fadeInFromTop 1s 1 forwards;
+    animation: 1s ease-out fadeInFromTop 500ms 1 forwards;
     top: 200px;
     right: 160px;
 }
 
 #title3{
-    animation: 2s ease-out fadeInFromTop 2s 1 forwards;
+    animation: 1s ease-out fadeInFromTop 1s 1 forwards;
     top: 250px;
     right: 50px;
 }
@@ -128,11 +161,11 @@ body{
     float: bottom;
     color: white;
     opacity: 0;
-    animation: 2s ease-out fadeInFromTop 4s 1 forwards;
+    animation: 1s ease-out fadeInFromTop 1500ms 1 forwards;
 }
 
 #skillContainer {
-    display: inline-block;
+    display: flex;
     clear: both;
     content: "";
     width: 100%;
@@ -140,7 +173,7 @@ body{
     margin-bottom: 25px;
     height: 800px;
     opacity: 0;
-    animation: 3s ease-out fadeIn 5s 1 forwards;
+    animation: 2s ease-out fadeIn 2s 1 forwards;
 }
 
 #skillContainer:hover>.skill{
@@ -149,7 +182,6 @@ body{
 }
 
 .skill{
-    float: left;
     width: 25%;
     height: 100%;
     display: flex;
@@ -179,7 +211,6 @@ body{
 }
 
 .skill:hover>h2{
-    /*margin: 380px 0;*/
     margin: 75px 0;
 }
 
